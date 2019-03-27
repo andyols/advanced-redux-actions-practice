@@ -1,3 +1,5 @@
+import { combineReducers } from 'redux'
+
 function currentCount(state = 0, action) {
   if (action.type === 'INCREASE_COUNTER') {
     return state + 1
@@ -73,3 +75,18 @@ function videoScale(state = 0, action) {
   }
   return state
 }
+
+const reducers = combineReducers({
+  currentCount,
+  users,
+  specialText,
+  currentCity,
+  currentTemp,
+  isLoading,
+  videoURL,
+  searchText,
+  currentUserSort,
+  videoScale
+})
+
+export default reducers
